@@ -6,6 +6,8 @@ import {
 } from 'react-native';
 import logo from '../img/logo.png'
 import { createStackNavigator } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation';
+
 import Signup from './signup'
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
@@ -51,8 +53,20 @@ class Login extends Component {
 }
 
 
-
-
+const App = createDrawerNavigator({
+    
+    Signup: {
+      screen: Signup,
+    },
+}, {
+     contentComponent: (props) => (
+        <View>
+          <Text>Custom Header</Text>
+          <DrawerItems {...props} />
+          <Text>Custom Footer</Text>
+        </View>
+      )
+    });
 const RootStack = createStackNavigator({
     Login: {
      screen: Login,
