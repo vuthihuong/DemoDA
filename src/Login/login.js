@@ -12,7 +12,7 @@ import Signup from './signup'
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-class Login extends Component {
+export class Login extends Component {
     render() {   
         return (
             <View style={styles.container}>
@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white'
     },
     logo: {
         flex:1,

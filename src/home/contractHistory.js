@@ -5,43 +5,32 @@ import { DrawerNavigator } from 'react-navigation';
 
 import { StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
-import HamburgerIcon from './iconheader'
 
+import HamburgerIcon from './hamburgerIcon'
 
-export default class SecondActivity extends Component {
-
+export default class ContractHistory extends Component {
     constructor(props) {
-   
-      super(props);
-    
+      super(props);   
       YellowBox.ignoreWarnings([
        'Warning: componentWillMount is deprecated',
        'Warning: componentWillReceiveProps is deprecated',
-     ]);
-    
+     ]);    
     }
-     
        render()
        {
           return(
-     
-             <View style = { styles.MainContainer }>
-     
-                <Text style={{fontSize: 23}}> This is Activity - 2 </Text>
-              
+             <View>
+                <Text style={{fontSize: 23}}> This is Activity - 3 </Text> 
              </View>
           );
        }
     }
-      const styles = StyleSheet.create({
     
-        MainContainer :{
-        
+    const styles = StyleSheet.create({
+        MainContainer :{ 
          flex:1,
          paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
          alignItems: 'center',
-         justifyContent: 'center',
-           
+         justifyContent: 'center',    
          }
-       
        })

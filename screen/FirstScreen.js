@@ -10,28 +10,37 @@ const MenuButton = (props) => (
         <Icon name="menu" style={{color: 'white', padding: 10, marginLeft:10, fontSize: 20}}/>
     </TouchableOpacity>
 );
+
+class ActionBarImage extends Component {
+ 
+    render() {
+   
+      return (
+   
+        <View style={{flexDirection: 'row'}}>
+   
+          <Image
+            source={{uri : 'https://secure.gravatar.com/avatar/dbbab0050db2dbd84d4e2c844196ee0c?s=60&d=mm&r=g'}}
+            style={{ width: 40, height: 40, borderRadius: 40/2, marginLeft: 15}}
+          />
+   
+        </View>
+      
+      );
+    
+    
+    }
+  }
+
 export default  class FirstScreen extends Component {
     static navigationOptions = ({navigation})=>(
         {
             title: 'Home',
-            header: ({ navigate }) => {
-                title = "Notifications";
-                left = (
-                  <TouchableOpacity onPress={() => navigate('DrawerOpen') }>
-                    <Image
-                      source={{ uri: 'https://cdn0.iconfinder.com/data/icons/ui-glyph/100/burger_menu-256.png' }}
-                      style={{ width: 30, height: 30, marginLeft: 10 }}
-                    />
-                  </TouchableOpacity>
-                )
-          
-                return { title, left };
-              }
-            ,
-              headerStyle: styles.header,
-              headerTitleStyle: styles.headerTXT,
-          
-            headerBackTitle: null,
+            
+
+            headerLeft: (<Button onPress={()=> this.props.navigation.navigate('DrawOpen')}
+            title="Open DrawNavigator"
+            />),
             tabBarLabel: 'Screen 1',
             drawerIcon: ({tintColor}) => {
                 return(

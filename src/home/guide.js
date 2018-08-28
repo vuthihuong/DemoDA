@@ -7,7 +7,7 @@ import { StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
 import HamburgerIcon from './hamburgerIcon'
 
-export default class Main extends Component { 
+export default class Guide extends Component { 
     constructor(props) {
       super(props);  
       YellowBox.ignoreWarnings([
@@ -39,7 +39,7 @@ export default class Main extends Component {
   const styles = StyleSheet.create({
     
     MainContainer :{
-     backgroundColor: '#F8F8FF',
+      backgroundColor: '#F8F8FF',
      flex:1,
      flexDirection: 'row',
      paddingTop: (Platform.OS) === 'ios' ? 20 : 0,

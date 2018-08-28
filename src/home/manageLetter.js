@@ -5,9 +5,9 @@ import { DrawerNavigator } from 'react-navigation';
 
 import { StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
-import HamburgerIcon from './iconheader'
+import HamburgerIcon from './hamburgerIcon'
 
-export default class ManageContract extends Component{
+export default class ManageLetter extends Component{
     constructor(props) {
  
         super(props);
@@ -15,18 +15,13 @@ export default class ManageContract extends Component{
         YellowBox.ignoreWarnings([
          'Warning: componentWillMount is deprecated',
          'Warning: componentWillReceiveProps is deprecated',
-       ]);
-      
-      }
-   
+       ]);      
+      }  
          render()
          {
-            return(
-       
-               <View>
-       
-                  <Text style={{fontSize: 23}}> This is Activity - 4 </Text>
-                
+            return(     
+               <View>    
+                  <Text style={{fontSize: 23}}> This is Activity - 4 </Text>           
                </View>
             );
          }
